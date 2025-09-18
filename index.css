@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ticket Ease Design System - Modern ticketing platform with vibrant tech aesthetics */
+
+@layer base {
+  :root {
+    --background: 220 25% 97%;
+    --foreground: 220 20% 15%;
+
+    /* Primary brand colors - Vibrant orange */
+    --primary: 25 95% 55%;
+    --primary-glow: 25 90% 65%;
+    --primary-dark: 25 100% 45%;
+    --primary-foreground: 25 10% 98%;
+
+    /* Vibrant accent colors - Orange and electric */
+    --accent: 25 95% 55%;
+    --accent-foreground: 25 10% 98%;
+    --accent-glow: 25 90% 65%;
+    --orange: 25 95% 55%;
+    --orange-foreground: 25 10% 98%;
+    --success: 150 75% 45%;
+    --success-foreground: 150 10% 98%;
+
+    /* Neutral colors */
+    --card: 220 15% 98%;
+    --card-foreground: 220 20% 15%;
+    --popover: 220 15% 98%;
+    --popover-foreground: 220 20% 15%;
+    --secondary: 220 20% 92%;
+    --secondary-foreground: 220 20% 25%;
+    --muted: 220 15% 90%;
+    --muted-foreground: 220 15% 45%;
+
+    /* System colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 20% 88%;
+    --input: 220 20% 88%;
+    --ring: 25 95% 55%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+    --gradient-orange: linear-gradient(135deg, hsl(var(--orange)) 0%, hsl(var(--accent-glow)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--secondary)) 100%);
+    
+    /* Shadows and effects */
+    --shadow-soft: 0 4px 20px -2px hsl(var(--primary) / 0.1);
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.3);
+    --shadow-card: 0 8px 32px -8px hsl(var(--foreground) / 0.1);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 12px;
+
+    /* Sidebar colors */
+    --sidebar-background: 220 15% 98%;
+    --sidebar-foreground: 220 20% 25%;
+    --sidebar-primary: 25 95% 55%;
+    --sidebar-primary-foreground: 25 10% 98%;
+    --sidebar-accent: 220 20% 92%;
+    --sidebar-accent-foreground: 220 20% 25%;
+    --sidebar-border: 220 20% 88%;
+    --sidebar-ring: 25 95% 55%;
+  }
+
+  .dark {
+    --background: 220 30% 8%;
+    --foreground: 220 15% 92%;
+
+    /* Primary colors for dark mode */
+    --primary: 25 90% 60%;
+    --primary-glow: 25 85% 70%;
+    --primary-dark: 25 95% 50%;
+    --primary-foreground: 25 30% 8%;
+
+    /* Vibrant accent colors for dark mode */
+    --accent: 25 90% 60%;
+    --accent-foreground: 25 30% 8%;
+    --accent-glow: 25 85% 70%;
+    --orange: 25 90% 60%;
+    --orange-foreground: 25 30% 8%;
+    --success: 150 70% 50%;
+    --success-foreground: 150 30% 8%;
+
+    /* Neutral colors for dark mode */
+    --card: 220 25% 12%;
+    --card-foreground: 220 15% 92%;
+    --popover: 220 25% 12%;
+    --popover-foreground: 220 15% 92%;
+    --secondary: 220 25% 18%;
+    --secondary-foreground: 220 15% 85%;
+    --muted: 220 25% 20%;
+    --muted-foreground: 220 15% 60%;
+
+    /* System colors for dark mode */
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 25% 18%;
+    --input: 220 25% 18%;
+    --ring: 25 90% 60%;
+
+    /* Sidebar colors for dark mode */
+    --sidebar-background: 220 25% 12%;
+    --sidebar-foreground: 220 15% 85%;
+    --sidebar-primary: 25 90% 60%;
+    --sidebar-primary-foreground: 25 30% 8%;
+    --sidebar-accent: 220 25% 18%;
+    --sidebar-accent-foreground: 220 15% 85%;
+    --sidebar-border: 220 25% 18%;
+    --sidebar-ring: 25 90% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/30 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/50;
+  }
+}
+
+@layer components {
+  /* Hero gradient background */
+  .hero-bg {
+    background: var(--gradient-hero);
+  }
+
+  /* Glassmorphism effect */
+  .glass {
+    backdrop-filter: blur(20px);
+    background: hsl(var(--card) / 0.8);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+
+  /* Floating animation */
+  .floating {
+    animation: floating 3s ease-in-out infinite;
+  }
+
+  @keyframes floating {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* Pulse glow effect */
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: var(--shadow-soft); }
+    50% { box-shadow: var(--shadow-glow); }
+  }
+}
