@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, Users, Globe, Zap, Shield, Heart } from "lucide-react";
+import { CheckCircle, Users, Globe, Zap, Shield } from "lucide-react";
 
 const About = () => {
   const features = [

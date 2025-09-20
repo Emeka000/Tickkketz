@@ -7,6 +7,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { useToast } from "@/components/ui/use-toast";
 import { Send, Bot, User, MessageCircle, Calendar, Headphones } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import type { User as SupabaseUser } from "@supabase/supabase-js";
 
 interface ChatModalProps {
   children: React.ReactNode;
@@ -48,7 +49,7 @@ export function ChatModal({ children, assistantType, title }: ChatModalProps) {
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [conversationId, setConversationId] = useState<string | null>(null);
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState<SupabaseUser | null>(null);
   const scrollAreaRef = useRef<HTMLDivElement>(null);
   const { toast } = useToast();
 
@@ -152,11 +153,6 @@ export function ChatModal({ children, assistantType, title }: ChatModalProps) {
     }
   };
 
-  const resetChat = () => {
-    setMessages([]);
-    setConversationId(null);
-    setIsOpen(false);
-  };
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>

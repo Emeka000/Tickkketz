@@ -86,7 +86,7 @@ const EventBookingModal = ({ event, isOpen, onClose }: EventBookingModalProps) =
         ticket_count: formData.ticket_count
       });
 
-      const { data: booking, error } = await supabase
+      const { error } = await supabase
         .from('event_bookings')
         .insert({
           event_id: event.id,
