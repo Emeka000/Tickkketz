@@ -2,8 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Clock, MapPin, Star } from "lucide-react";
-//import blackPantherPoster from "../assets/black-panther-poster.jpg";
-import blackPantherPoster from "../../assets/black-panther-poster.jpg";
+import blackPantherPoster from "@/assets/black-panther-poster.jpg";
 import kingOfThievesPoster from "@/assets/king-of-thieves-poster.jpg";
 import avatarPoster from "@/assets/avatar-way-of-water-poster.jpg";
 

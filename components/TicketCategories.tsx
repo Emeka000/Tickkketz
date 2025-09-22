@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { AuthModal } from "@/components/AuthModal";
-import { Film, Calendar, ArrowRight, Clock, MapPin } from "lucide-react";
-import cinemaLuxury from "../assets/cinema-luxury.jpg";
+import { Film, Calendar, ArrowRight, Clock } from "lucide-react";
+import cinemaLuxury from "@/assets/cinema-luxury.jpg";
 import eventsFestival from "@/assets/events-festival.jpg";
 
 const categories = [

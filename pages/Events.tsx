@@ -10,12 +10,15 @@ import QRScanner from "@/components/QRScanner";
 interface Event {
   id: string;
   title: string;
-  description: string;
+  description: string | null;
   date_time: string;
   location: string;
-  max_attendees: number;
-  price: number;
-  category: string;
+  max_attendees: number | null;
+  price: number | null;
+  category: string | null;
+  created_at: string;
+  updated_at: string;
+  organizer_id: string | null;
 }
 
 const Events = () => {

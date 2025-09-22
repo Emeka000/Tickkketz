@@ -2,8 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { QrCode, TrendingUp, Zap, Shield, Users, CreditCard, ArrowRight } from "lucide-react";
-//import qrFeature from "@/assets/qr-feature.jpg";
-import qrFeature from "../assets/qr-feature.jpg"; // adjust path as needed
+import qrFeature from "@/assets/qr-feature.jpg";
 import analyticsFeature from "@/assets/analytics-feature.jpg";
 import paymentsFeature from "@/assets/payments-security.jpg";
 import multiChannelFeature from "@/assets/multi-channel.jpg";

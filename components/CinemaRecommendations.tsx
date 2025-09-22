@@ -1,9 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Star, Clock, Sparkles, Navigation } from "lucide-react";
-import cinemaFeature from "@/assets/cinema-feature.jpg";
 import cinemaLuxury from "@/assets/cinema-luxury.jpg";
 
 const nigerianCities = [
